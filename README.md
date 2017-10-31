@@ -2,7 +2,7 @@
 
 ## Create A New Unity Project
 
-Create a new project, and name it "my-world"
+Create a new project, and name it "codenext-go"
 
 <details>
   <summary> Pic </summary>
@@ -53,7 +53,7 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
 ##### Other Settings
 
 * Click "Other Settings"
-* Change the Package Name to "com.YourName.MyWorld"
+* Change the Package Name to "com.YourName.CodeNextGo"
 * Change the Minimum API Level to "Android 7.0 'Nougat' (API level 24)" 
 
 <details>
@@ -72,21 +72,27 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
   <img src="images/xr-settings.png">
 </details>
 
-## Creating the Ground (optional)
-
-If your world will have a ground, here's how you can create one.
+## Creating the Ground
 
 ##### Add a cube
 
 * Add a Cube GameObject to your scene, and name it "Ground"
 * Set the position to x: 0, y: -1, z: 0
-* Set the scale to x: 200, y: 0, z: 200
-
+* Set the scale to x: 20, y: 1, z: 20
 
 ## Camera Setup
 
+* Create an empty GameObject and name it PlayerCamera
+* Make the Main Camera a child of this PlayerCamera by dragging it into the Main Camera
+* Add a RigidBody component to the 
+* Add a Capsule Collider component to the PlayerCamera
+* In the Capsule Collider, change the Center - Y value to -0.5
+* In the Capsule Collider, change the Height value to 1.5
+
 ## Design the Pokeball (with Special Guest - Coach Wolf!)
 
-## Add the Pokeball texture
+## Spawn the Pokeball (with Special Guest - Coach Wolf!)
 
-## Spawn the Pokeball
+
+
+
