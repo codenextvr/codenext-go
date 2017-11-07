@@ -244,6 +244,29 @@ public class WalkAndThrow : MonoBehaviour {
   <img src="images/pokeball-tower.png">
 </details>
 
+## Build Break (with Special Guest ..... Coach Wolf!! Again !!!)
+
+##### Go to File > Build Settings and drag your scene into "Scenes in Build"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/add-main-scene.png">
+</details>
+
+##### Make sure your phone is on and plugged into your computer
+
+##### Click "Build and Run" then save as "build0"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/build0.png">
+</details>
+
+##### The app should now play on your phone as a Cardboard app
+
+
+
+
 
 
 
