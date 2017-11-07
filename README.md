@@ -324,21 +324,21 @@ public class WalkAndThrow : MonoBehaviour {
 
 <details>
   <summary> Pic </summary>
-  <img src="level1-search.png">
+  <img src="images/level1-search.png">
 </details>
 
 ##### Click on the pack, Download, & Import the whole thang. NOTE: You may have to sign in with your Unity ID, try "Sign-in with Google"
 
 <details>
   <summary> Pic </summary>
-  <img src="import-pack.png">
+  <img src="images/import-pack.png">
 </details>
 
 ##### In the newly created Level 1 Monster Pack folder > Prefabs. You will see the following folders
 
 <details>
   <summary> Pic </summary>
-  <img src="level1-prefabs.png">
+  <img src="images/level1-prefabs.png">
 </details>
 
 ##### Open the Rabbit folder, and drag a Rabbit_Yellow into your scene
@@ -346,7 +346,7 @@ public class WalkAndThrow : MonoBehaviour {
 
 <details>
   <summary> Pic </summary>
-  <img src="rabbit-yellow.png">
+  <img src="images/rabbit-yellow.png">
 </details>
 
 ##### Change the scale of the Rabbit_Yellow to (35, 35, 35)
@@ -356,7 +356,7 @@ public class WalkAndThrow : MonoBehaviour {
 
 <details>
   <summary> Pic </summary>
-  <img src="rabbit-yellow-vals.png">
+  <img src="images/rabbit-yellow-vals.png">
 </details>
 
 ##### Add a Capsule Collider component to the Rabbit_Yellow
@@ -377,7 +377,7 @@ public class WalkAndThrow : MonoBehaviour {
 
 <details>
   <summary> Pic </summary>
-  <img src="rabbit-yellow2.png">
+  <img src="images/rabbit-yellow2.png">
 </details>
 
 ## Build Break!!
