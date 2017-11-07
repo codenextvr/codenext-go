@@ -264,6 +264,105 @@ public class WalkAndThrow : MonoBehaviour {
 
 ##### The app should now play on your phone as a Cardboard app
 
+## Throwing the Pokeball
+
+##### On the PlayerCamera, change the Capsule Collider height to -1.1
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/new-collider.png">
+</details>
+
+##### Open the WalkAndThrow script, and empty it again
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/empty-script.png">
+</details>
+
+##### Copy and paste the following code into the WalkAndThrow script
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WalkAndThrow : MonoBehaviour {
+
+	public GameObject pokeball;
+
+	public float throwSpeed = 10;
+
+	// Use this for initialization
+	void Start () {
+
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetButtonDown("Fire1")) {
+			GameObject pokeGo = Instantiate(pokeball);
+			pokeGo.transform.position = transform.position;
+			Rigidbody rb = pokeGo.GetComponent<Rigidbody> ();
+			Camera cam = GetComponentInChildren<Camera> ();
+			rb.velocity = cam.transform.rotation * Vector3.forward * throwSpeed;
+		}
+	}
+}
+````
+
+##### The WalkAndThrow script should now look like this. (Make sure to save it with CMD + S)
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/walk-throw2.png">
+</details>
+
+## Creating the Monsters
+
+##### Go to the Asset Store and search for the "Level 1 Monster Pack"
+
+<details>
+  <summary> Pic </summary>
+  <img src="level1-search.png">
+</details>
+
+##### Click on the pack, Download, & Import the whole thang. NOTE: You may have to sign in with your Unity ID, try "Sign-in with Google"
+
+<details>
+  <summary> Pic </summary>
+  <img src="import-pack.png">
+</details>
+
+##### In the newly created Level 1 Monster Pack folder > Prefabs. You will see the following folders
+
+<details>
+  <summary> Pic </summary>
+  <img src="level1-prefabs.png">
+</details>
+
+##### Open the Rabbit folder, and drag a Rabbit_Yellow into your scene
+
+
+<details>
+  <summary> Pic </summary>
+  <img src="rabbit-yellow.png">
+</details>
+
+##### Change the scale of the Rabbit_Yellow to (35, 35, 35)
+##### Change the rotation of the Rabbit_Yellow to (0, 180, 0)
+##### Move the Rabbit_Yellow position in front of the camera (0, 0, -4)
+
+
+<details>
+  <summary> Pic </summary>
+  <img src="rabbit-yellow-vals.png">
+</details>
+
+
+
+
+
 
 
 
