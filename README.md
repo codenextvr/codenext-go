@@ -84,6 +84,8 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
   <summary> Pic </summary>
   <img src="images/ground-vals.png">
 </details>
+
+##### Your Ground should look like this
 <details>
   <summary> Pic </summary>
   <img src="images/ground.png">
@@ -133,6 +135,8 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
   <summary> Pic </summary>
   <img src="images/capsule-vals.png">
 </details>
+
+##### Your PlayerCamera should look like this
 <details>
   <summary> Pic </summary>
   <img src="images/capsule.png">
@@ -141,6 +145,82 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
 ## Design the Pokeball (with Special Guest - Coach Wolf!)
 
 ## Spawn the Pokeball (with Special Guest - Coach Wolf!)
+
+##### Create a folder called "Scripts"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/create-folder.png">
+</details>
+
+##### Create a C# Script in that Scripts folder called "WalkAndThrow"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/walk-and-throw.png">
+</details>
+
+##### Open the WalkAndThrow script, and completely empty it
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/empty-script.png">
+</details>
+
+##### Copy and paste the following code into the script
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WalkAndThrow : MonoBehaviour {
+
+	public GameObject pokeball;
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if (Input.GetButtonDown("Fire1")) {
+			Instantiate(pokeball);
+		}
+	}
+}
+````
+
+##### The WalkAndThrow Script should now look like this
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/walkthrow-code.png">
+</details>
+
+##### Drag the WalkAndThrow Script onto the PlayerCamera. Now, if you click on the PlayerCamera, you will see the Script component at the bottom
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/walkthrow-playercam.png">
+</details>
+
+##### In that Script component, you will see a field named "Pokeball". Drag the Pokeball prefab we created onto this field
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/pokeball-field.png">
+</details>
+
+
+
+
+
+
+
+
+
 
 
 
