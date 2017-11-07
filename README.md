@@ -80,6 +80,11 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
 * Set the position to x: 0, y: -1, z: 0
 * Set the scale to x: 20, y: 1, z: 20
 
+<details>
+  <summary> Pic </summary>
+  <img src="images/ground-vals.png">
+</details>
+
 ## Camera Setup
 
 * Create an empty GameObject and name it PlayerCamera
