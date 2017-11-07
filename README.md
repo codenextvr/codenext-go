@@ -97,14 +97,14 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
   <summary> Pic </summary>
   <img src="images/create-empty.png">
 </details>
-
+<br>
 * Drag the Main Camera into this PlayerCamera
 
 <details>
   <summary> Pic </summary>
   <img src="images/player-main.png">
 </details>
-
+<br>
 * Add a RigidBody component to the 
 * Add a Capsule Collider component to the PlayerCamera
 * In the Capsule Collider, change the Center - Y value to -0.5
