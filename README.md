@@ -91,24 +91,52 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
 
 ## Camera Setup
 
-* Create an empty GameObject and name it PlayerCamera
+##### Create an empty GameObject and name it PlayerCamera
 
 <details>
   <summary> Pic </summary>
   <img src="images/create-empty.png">
 </details>
-<br>
-* Drag the Main Camera into this PlayerCamera
+
+##### Drag the Main Camera into this PlayerCamera
 
 <details>
   <summary> Pic </summary>
   <img src="images/player-main.png">
 </details>
-<br>
-* Add a RigidBody component to the 
-* Add a Capsule Collider component to the PlayerCamera
-* In the Capsule Collider, change the Center - Y value to -0.5
-* In the Capsule Collider, change the Height value to 1.5
+
+##### Add a RigidBody component to the PlayerCamera
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/rigidbody.png">
+</details>
+
+##### In the Rigidbody Contraints, Select X, Y, Z for Freeze Rotation
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/freeze-rotation.png">
+</details>
+
+##### Add a Capsule Collider component to the PlayerCamera
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/capsule-collider.png">
+</details>
+
+##### In the Capsule Collider, change the Center - Y value to -0.5
+##### In the Capsule Collider, change the Height value to 1.5
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/capsule-vals.png">
+</details>
+<details>
+  <summary> Pic </summary>
+  <img src="images/capsule.png">
+</details>
 
 ## Design the Pokeball (with Special Guest - Coach Wolf!)
 
