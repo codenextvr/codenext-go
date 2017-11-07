@@ -136,6 +136,21 @@ Now, with the Build Settings window still open, click "Player Settings" and it w
   <img src="images/capsule-vals.png">
 </details>
 
+##### Move the PlayerCamera Y position to 2.28, and Z position to -9.46
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/move-player-cam.png">
+</details>
+
+##### Move the Main Camera X, Y, and Z positions to (0, 0, 0)
+
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/move-main-cam.png">
+</details>
+
 ##### Your PlayerCamera should look like this
 <details>
   <summary> Pic </summary>
