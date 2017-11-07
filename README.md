@@ -359,13 +359,6 @@ public class WalkAndThrow : MonoBehaviour {
   <img src="rabbit-yellow-vals.png">
 </details>
 
-##### The Rabbit_Yellow should now look like this
-
-<details>
-  <summary> Pic </summary>
-  <img src="rabbit-yellow2.png">
-</details>
-
 ##### Add a Capsule Collider component to the Rabbit_Yellow
 
 <details>
@@ -379,6 +372,15 @@ public class WalkAndThrow : MonoBehaviour {
   <summary> Pic </summary>
   <img src="images/rabbit-yellow-vals2.png">
 </details>
+
+##### The Rabbit_Yellow should now look like this
+
+<details>
+  <summary> Pic </summary>
+  <img src="rabbit-yellow2.png">
+</details>
+
+## Build Break!!
 
 
 
