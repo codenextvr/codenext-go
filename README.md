@@ -380,6 +380,14 @@ public class WalkAndThrow : MonoBehaviour {
   <img src="images/rabbit-yellow2.png">
 </details>
 
+##### Change the Ground position to (0, -0.5, 0)
+
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/new-ground.png">
+</details>
+
 ## Build Break!!
 
 
