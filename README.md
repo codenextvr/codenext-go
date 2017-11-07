@@ -228,6 +228,23 @@ public class WalkAndThrow : MonoBehaviour {
   <img src="images/pokeball-field.png">
 </details>
 
+##### Delete the Pokeball GameObject from our hiearchy (our script will make it appear now)
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/delete-pokeball.png">
+</details>
+
+
+##### Now when you press play, and click the left mouse button ..... Pokeballs will appear!
+
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/pokeball-tower.png">
+</details>
+
+
 
 
 
