@@ -359,6 +359,29 @@ public class WalkAndThrow : MonoBehaviour {
   <img src="rabbit-yellow-vals.png">
 </details>
 
+##### The Rabbit_Yellow should now look like this
+
+<details>
+  <summary> Pic </summary>
+  <img src="rabbit-yellow2.png">
+</details>
+
+##### Add a Capsule Collider component to the Rabbit_Yellow
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/capsule-collider.png">
+</details>
+
+##### Change the Capsule Collider "Center - Y", "Radius", and "Height" values to 0.01
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/rabbit-yellow-vals2.png">
+</details>
+
+
+
 
 
 
