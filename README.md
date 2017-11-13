@@ -382,13 +382,67 @@ public class WalkAndThrow : MonoBehaviour {
 
 ##### Change the Ground position to (0, -0.5, 0)
 
-
 <details>
   <summary> Pic </summary>
   <img src="images/new-ground.png">
 </details>
 
+##### Rename the Rabbit_Yellow to Rabbit_Yellow_Prefab
+
+##### In the Inspector tab: under the name "Rabbit_Yellow_Prefab", click the dropdown next to "Tag" and choose "Add Tag"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/add-tag.png">
+</details>
+
+##### Under "Tags": click the "+" icon, name the tag "yellowrabbit", then press "Save"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/name-tag.png">
+</details>
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/saved-tag.png">
+</details>
+
+##### Add the "yellowrabbit" tag to the "Rabbit_Yellow_Prefab"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/added-tag.png">
+</details>
+
+
 ## Build Break!!
+
+## More Monsters
+
+##### Open the Slime folder, and drag a Slime_Red into your scene
+##### Change the scale of the Slime_Red to (35, 35, 35)
+##### Change the rotation of the Slime_Red to (0, 180, 0)
+##### Move the Slime_Red position in front of the camera (-2, 0, -4)
+##### Add a Capsule Collider component to the Slime_Red
+##### Change the Capsule Collider "Center - Y", "Radius", and "Height" values to 0.01
+##### Rename the "Slime_Red" to "Slime_Red_Prefab"
+##### In the Inspector tab: under the name "Slime_Red_Prefab", click the dropdown next to "Tag" and choose "Add Tag"
+##### Under "Tags": click the "+" icon, name the tag "redslime", then press "Save"
+##### Add the "redslime" tag to the "Slime_Red_Prefab"
+
+## Even More Monsters
+
+##### Open the Ghost folder, and drag a Ghost_Violet into your scene
+##### Change the scale of the Ghost_Violet to (35, 35, 35)
+##### Change the rotation of the Ghost_Violet to (0, 180, 0)
+##### Move the Ghost_Violet position in front of the camera (2, 0, -4)
+##### Add a Capsule Collider component to the Ghost_Violet
+##### Change the Capsule Collider "Center - Y", "Radius", and "Height" values to 0.01
+##### Rename the "Ghost_Violet" to "Ghost_Violet_Prefab"
+##### In the Inspector tab: under the name "Ghost_Violet_Prefab", click the dropdown next to "Tag" and choose "Add Tag"
+##### Under "Tags": click the "+" icon, name the tag "violetghost", then press "Save"
+##### Add the "ghostviolet" tag to the "Ghost_Violet_Prefab"
 
 
 
