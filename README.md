@@ -444,6 +444,400 @@ public class WalkAndThrow : MonoBehaviour {
 ##### Under "Tags": click the "+" icon, name the tag "violetghost", then press "Save"
 ##### Add the "ghostviolet" tag to the "Ghost_Violet_Prefab"
 
+## Creating Monster Prefabs
+
+##### Drag each Monster GameObject into YOUR Prefabs folder (not the one from the Level 1 Monsters Pack ---- (if this is confusing, call Coach Wolf)
+
+##### Delete the Monsters from the Hiearchy
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/monster-fabs.png">
+</details>
+
+## Collecting the Monsters
+
+##### Select EACH Monster prefab and, on EACH Capsule Collider, choose the "Is Trigger" option
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/is-trigger.png">
+</details>
+
+##### Create a new C# Script called "MonstersCollected"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/monsters-collected.png">
+</details>
+
+##### Open the "MonstersCollected" script, and completely empty it
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/empty-script.png">
+</details>
+
+##### Copy and paste the following code into the MonstersCollected Script
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MonstersCollected : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	public void OnTriggerEnter(Collider collider) {
+		if (collider.gameObject.CompareTag ("violetghost")) {
+			Destroy (collider.gameObject);
+		}
+		if (collider.gameObject.CompareTag ("yellowrabbit")) {
+			Destroy (collider.gameObject);
+		}
+		if (collider.gameObject.CompareTag ("redslime")) {
+			Destroy (collider.gameObject);
+		}
+	}
+}
+````
+
+##### The MonstersCollectedScript should now look like this
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/monster-collect-script1.png">
+</details>
+
+##### Click on the Pokeball prefab to open it in the Inspector view, then drag the MonstersCollected script on to the Pokeball
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/poke-inspect.png">
+</details>
+
+## BUILD BREAK
+
+##### At this point, when you throw a Pokeball at a Monster ----- the monster should disappear
+
+## Keeping score
+
+##### Create a new C# Script called "MonsterCalc"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/monster-calc.png">
+</details>
+
+
+##### Open the "MonsterCalc" script, and completely empty it
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/empty-script.png">
+</details>
+
+##### Copy and paste the following code into the "MonsterCalc" script
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MonsterCalc : MonoBehaviour {
+	public int counter;
+
+	// Use this for initialization
+	void Start () {
+		counter = 0;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void incrementCount() {
+		counter = counter + 1;
+	}
+}
+````
+
+##### The "MonsterCalc" script should now look like this
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/monster-calc-script.png">
+</details>
+
+##### Create an empty GameObject in the Hiearchy, and name it "MonsterCalc"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/create-empty.png">
+</details>
+
+##### Drag the "MonsterCalc" script on to the "MonsterCalc" GameObject
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/monster-calc-go.png">
+</details>
+
+## Updating MonstersCollected and Destroying Pokeballs
+
+##### Add a Tag to the Ground GameObject called "ground" (like you did the Monsters before)
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/add-tag-to-ground.png">
+</details>
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/ground-tag-added.png">
+</details>
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/ground-tag-attached.png">
+</details>
+
+##### Open the "MonstersCollected" Script, and completely empty it (again)
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/empty-script.png">
+</details>
+
+##### Copy and paste the following code into the "MonstersCollected" script
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MonstersCollected : MonoBehaviour {
+
+	MonsterCalc monsterCalc;
+
+	// Use this for initialization
+	void Start () {
+		monsterCalc = FindObjectOfType<MonsterCalc> ();
+	}
+	
+	public void OnTriggerEnter(Collider collider) {
+		if (collider.gameObject.CompareTag ("violetghost")) {
+			Destroy (collider.gameObject);
+			monsterCalc.incrementCount ();
+			Destroy (gameObject);
+		}
+		if (collider.gameObject.CompareTag ("yellowrabbit")) {
+			Destroy (collider.gameObject);
+			monsterCalc.incrementCount ();
+			Destroy (gameObject);
+		}
+		if (collider.gameObject.CompareTag ("redslime")) {
+			Destroy (collider.gameObject);
+			monsterCalc.incrementCount ();
+			Destroy (gameObject);
+		}
+	}
+
+	public void OnCollisionEnter(Collision collision) {
+		if(collision.gameObject.CompareTag("ground")) {
+			Destroy (gameObject);
+		}
+	}
+		
+}
+````
+
+## BUILD BREAK
+
+##### When you throw a Pokeball, it should capture a Monster and disappear when it hits it or the ground
+
+## Generating Monsters Randomly
+
+##### Change the scale of your "Ground" to (200, 1, 200)
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/new-ground2.png">
+</details>
+
+##### Create a new C# script called "RandomMonsters"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/random-monsters.png">
+</details>
+
+##### Open the "RandomMonsters" script, and completely empty it
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/empty-script.png">
+</details>
+
+##### Copy and paste the following code into the "RandomMonsters" script
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RandomMonsters : MonoBehaviour {
+
+	public GameObject[] monsters;
+
+	// Use this for initialization
+	void Start () {
+		for (int i = 0; i < Random.Range(700,900); i++) {
+			monsterCount ();
+		}
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void monsterCount() {
+		int monsterIndex = Random.Range (0, monsters.Length);
+		GameObject monster = Instantiate(monsters[monsterIndex]);
+		monster.transform.parent = transform;
+		monster.transform.localPosition = new Vector3 (Random.Range (-90, 90), 0.0f, Random.Range (-90, 90));
+	}
+}
+````
+
+##### The RandomMonsters Script should now look like this
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/random-monster-code.png">
+</details>
+
+
+##### Create an empty GameObject, and name it "RandomMonsters"
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/create-empty.png">
+</details>
+
+##### Change the position of the "RandomMonsters" GameObject to (0, 0, 0), and drag on the "RandomMonsters" script
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/random-monsters-vals.png">
+</details>
+
+##### Select the "RandomMonsters" GameObject and, on the RandomMonsters script component, dropdown the "Monsters" field
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/monster-drop.png">
+</details>
+
+##### Enter "3" for the Size
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/size-3.png">
+</details>
+
+##### Drag a different Monster prefab into each "Element" slot
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/drag-monster-fabs.png">
+</details>
+
+##### When you press play, a ton of monsters should now appear randomly all over the larger ground
+
+## Walking
+
+##### Open the "WalkAndThrow" script, and completely empty it
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/empty-script.png">
+</details>
+
+##### Copy and paste the following code into the "WalkAndThrow" script
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WalkAndThrow : MonoBehaviour {
+
+	public GameObject pokeball;
+
+	public float throwSpeed = 10;
+	public float walkSpeed = 2;
+
+	// Use this for initialization
+	void Start () {
+
+	}
+
+	// Update is called once per frame
+	void Update () {
+
+		transform.position = transform.position + Camera.main.transform.forward * walkSpeed * Time.deltaTime;
+			
+		if (Input.GetButtonDown("Fire1")) {
+			GameObject pokeGo = Instantiate(pokeball);
+			pokeGo.transform.position = transform.position;
+			Rigidbody rb = pokeGo.GetComponent<Rigidbody> ();
+			Camera cam = GetComponentInChildren<Camera> ();
+			rb.velocity = cam.transform.rotation * Vector3.forward * throwSpeed;
+		}
+	}
+}
+````
+
+##### The "WalkAndThrow" script should now look like this
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/walk-and-code.png">
+</details>
+
+## BUILD BREAK
+
+##### Your scene should now move in the direction you are facing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
