@@ -818,6 +818,118 @@ public class WalkAndThrow : MonoBehaviour {
 
 ##### Your scene should now move in the direction you are facing
 
+## Creating the environment
+
+##### Go to the asset store and search for the "Low Poly Free Pack"
+
+##### Download and Import the Low Poly Free Pack by Tornado Bandits Studio
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/low-poly-free-pack.png">
+</details>
+
+##### In the TornadoBanditsStudio/Low Poly Free Pack folder, go to Prefabs
+
+##### In the (misspelled) Tress folder, drag a Tree_Palm_02 tree into the scene
+
+##### In the Rocks folder, drag both a Rock_01 and a Rock_02 into the scene (Feel free to move these so they are more visible)
+
+##### Click "All Models", and drag a Grass_02 into the scene 
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/all-models.png">
+</details>
+
+##### Click "All Materials", and drag the Grass material on to your Ground
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/all-materials.png">
+</details>
+
+##### Create prefabs by dragging the Tree, Rocks, and Grass into YOUR prefabs folder
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/env-prefabs.png">
+</details>
+
+##### In the Low Poly Free Pack, go to Skyboxes and drag a skybox into the sky of your Scene view
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/skyboxes.png">
+</details>
+
+##### Remove the environment prefabs from the scene
+
+##### Create a new C# Script named "RandomForest", completely empty it, and paste the following:
+
+````c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RandomForest : MonoBehaviour {
+
+	public GameObject[] differentTreesRocks;
+	public GameObject[] differentGrassRocks;
+
+	// Use this for initialization
+	void Start () {
+
+		for (int i = 0; i < Random.Range(700, 800); i++) {
+			spawnTreesRocks ();
+		}
+
+		for (int j = 0; j < Random.Range(1000, 1100); j++) {
+			spawnGrassRocks ();
+		}
+
+	}
+
+	// Update is called once per frame
+	void Update () {
+
+	}
+
+	public void spawnTreesRocks() {
+
+		int treesRocksIndex = Random.Range (0, differentTreesRocks.Length);
+		GameObject randomTreesRocks = Instantiate (differentTreesRocks[treesRocksIndex]);
+		randomTreesRocks.transform.parent = transform;
+		randomTreesRocks.transform.localPosition = new Vector3 (Random.Range (-95, 95), 0.0f, Random.Range (-95, 95));
+	}
+
+	public void spawnGrassRocks() {
+
+		int grassRocksIndex = Random.Range (0, differentGrassRocks.Length);
+		GameObject randomGrassRocks = Instantiate (differentGrassRocks[grassRocksIndex]);
+		randomGrassRocks.transform.parent = transform;
+		randomGrassRocks.transform.localPosition = new Vector3 (Random.Range (-95, 95), 0.0f, Random.Range (-95, 95));
+	}
+
+}
+````
+
+##### Create an empty GameObject, name it RandomForest, set the position to (0, 0, 0), and drag the RandomForest script on to it
+
+##### Click on the RandomForest GameObject, and it will now have the script attached
+
+##### Make the Script component look like so:
+
+<details>
+  <summary> Pic </summary>
+  <img src="images/randomforest-setup.png">
+</details>
+
+
+
+
+
+
 
 
 
