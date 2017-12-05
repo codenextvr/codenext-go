@@ -448,8 +448,6 @@ public class WalkAndThrow : MonoBehaviour {
 
 ##### Drag each Monster GameObject into YOUR Prefabs folder (not the one from the Level 1 Monsters Pack ---- (if this is confusing, call Coach Wolf)
 
-##### Delete the Monsters from the Hiearchy
-
 <details>
   <summary> Pic </summary>
   <img src="images/monster-fabs.png">
@@ -759,6 +757,9 @@ public class RandomMonsters : MonoBehaviour {
   <summary> Pic </summary>
   <img src="images/drag-monster-fabs.png">
 </details>
+
+
+##### Delete the Monsters from the Hiearchy
 
 ##### When you press play, a ton of monsters should now appear randomly all over the larger ground
 
