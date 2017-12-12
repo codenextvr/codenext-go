@@ -931,7 +931,7 @@ public class RandomForest : MonoBehaviour {
 
 ## Adding sound
 
-##### Download the sound file you want to be played as background music. Here is a list of Pokemon examples [](https://www.google.com)
+##### Download the sound file you want to be played as background music. Here is a list of Pokemon examples [Link](https://downloads.khinsider.com/game-soundtracks/album/pokemon-gameboy-sound-collection)
 
 ##### In the Assets folder, go to "Import New Asset" and choose your sound file
 
