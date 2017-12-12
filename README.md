@@ -925,51 +925,28 @@ public class RandomForest : MonoBehaviour {
   <img src="images/randomforest-setup.png">
 </details>
 
+## Build Break!!
 
+##### Your scene should now have a sky, trees, and rocks 
 
+## Adding sound
 
+##### Download the sound file you want to be played as background music. Here is a list of Pokemon examples [](https://www.google.com)
 
+##### In the Assets folder, go to "Import New Asset" and choose your sound file
 
+##### Add an Audio > Audio Source to your scene (from the same menu you add cubes, spheres, empty GameObjects, etc) 
 
+<details>
+  <summary> Pic </summary>
+  <img src="images/audio-source.png">
+</details>
 
+##### In the Audio Source, change the "Audio Clip" to your file by dragging or clicking the little button next to it
 
+##### Make sure "Play On Awake" and "Loop" are selected
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<details>
+  <summary> Pic </summary>
+  <img src="images/audio-settings.png">
+</details>
