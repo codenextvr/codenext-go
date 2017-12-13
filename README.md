@@ -818,6 +818,8 @@ public class WalkAndThrow : MonoBehaviour {
 
 ##### Your scene should now move in the direction you are facing
 
+[Starter](https://drive.google.com/drive/folders/1GH95_1bJgT0jHhPKLj1IKsSPVNazNWLZ?usp=sharing)
+
 ## Creating the environment
 
 ##### Go to the asset store and search for the "Low Poly Free Pack"
